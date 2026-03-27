@@ -1,22 +1,24 @@
-# Ring Tech Global - Corporate Homepage
+# Ring Tech Global - Corporate Website
 
-A modern, high-end corporate homepage designed for Ring Tech Global, an IT services and digital transformation company. This project prioritizes a premium aesthetic with zero build-tool overhead, utilizing pure HTML and CSS.
+A modern, high-end corporate website designed for Ring Tech Global, an IT services and digital transformation company. This project prioritizes a premium aesthetic with a clean, multi-page static architecture utilizing pure HTML, CSS, and Vanilla JavaScript.
 
 ## 🚀 Features
 
-* **Zero-Setup Architecture:** No `npm`, no terminals, and no local servers required to run or edit the site.
-* **Dynamic Hero Section:** Immersive data-center background video loop with a clean, readable text overlay.
-* **Modern UI/UX:** Corporate styling featuring glassmorphism (frosted glass effects), glowing text, and a professional dark slate color palette.
-* **Smooth Animations:** Native CSS scroll-triggered fade-ins and hover effects using the Intersection Observer API.
+* **Multi-Page Architecture:** Clean, modular structure with dedicated pages for About, Products, Digital Transformation, Contact, and more.
+* **Separation of Concerns:** Global styles and JavaScript logic are extracted into dedicated `assets/css` and `assets/js` folders for easy maintenance.
+* **Zero-Setup Environment:** No `npm`, no terminals, and no local servers required to run or edit the site.
+* **Dynamic Navigation:** Features a responsive desktop hover-dropdown menu and a tap-to-expand mobile accordion menu.
+* **Modern UI/UX:** Corporate styling featuring glassmorphism (frosted glass effects), interactive cards, and a professional dark slate/teal color palette.
 * **Fully Responsive:** Seamlessly adapts to desktop, tablet, and mobile screen sizes using Tailwind utility classes.
 
 ## 🛠 Tech Stack
 
 * **Core:** HTML5 & CSS3
-* **Styling:** [Tailwind CSS](https://tailwindcss.com/) 
-* **Icons:** [Phosphor Icons](https://phosphoricons.com/) 
-* **Interactivity:** Vanilla JavaScript (for scroll animations)
- 
+* **Styling:** [Tailwind CSS](https://tailwindcss.com/) (via CDN)
+* **Icons:** Heroicons / Custom SVG
+* **Interactivity:** Vanilla JavaScript (Mobile menu, dropdowns, and logo filtering)
+
+## 💻 Getting Started
 
 ### Prerequisites
 * A modern web browser (Chrome, Edge, Firefox, Safari).
@@ -32,7 +34,21 @@ A modern, high-end corporate homepage designed for Ring Tech Global, an IT servi
 
 ```text
 ringtechglobal/
-├── assets/           # Stores images, videos, and other static media files.
-├── index.html        # The main homepage containing all sections and CSS/JS logic.
-├── .gitignore        # Prevents unnecessary system files from uploading to version control.
-└── README.md         # Project documentation (this file).
+├── assets/                 
+│   ├── css/
+│   │   └── style.css       # Global custom styles and color variables
+│   ├── images/             # Partner logos, gallery placeholders, and photos
+│   ├── js/
+│   │   └── main.js         # Global logic for mobile menu and active states
+│   └── videos/             # Background loop for the hero section
+├── index.html              # Main Homepage
+├── about.html              # About Us & Company Story
+├── products.html           # Hardware & Product Categories
+├── DigitalTransformation.html # Core Digital Solutions & Services
+├── gallery.html            # Visual Showcase
+├── tracking.html           # Shipment Tracking Portal
+├── contact.html            # Contact Form & Information
+├── privacy.html            # Privacy Policy
+├── terms.html              # Terms & Conditions
+├── .gitignore              # Git ignore rules
+└── README.md               # Project documentation (this file)
