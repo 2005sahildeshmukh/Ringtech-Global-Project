@@ -1,0 +1,15 @@
+body {
+    background-color: #0a192f;
+    color: white;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Glassmorphism for scrolled header */
+.glass-header {
+    background-color: rgba(10, 25, 47, 0.95);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
