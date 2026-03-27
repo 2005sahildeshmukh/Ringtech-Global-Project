@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Ring Tech Global</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0a192f',
+                        secondary: '#64ffda', /* The new teal accent */
+                        accent: '#112240',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+    <style>
+        #navbar { background-color: #0a192f !important; padding-top: 0.75rem !important; padding-bottom: 0.75rem !important; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen bg-[#0a192f] selection:bg-secondary/30">
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-white tracking-tight">
+                        Ring<span class="text-blue-400">TechGlobal</span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                    <a href="about.html" class="text-slate-200 hover:text-white text-sm font-semibold transition-colors">About Us</a>
+                    
+                    <div class="relative group">
+                        <a href="products.html" class="text-slate-200 hover:text-white text-sm font-semibold transition-colors inline-flex items-center py-2">
+                            Products
+                            <svg class="w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </a>
+                        <div class="absolute left-0 top-full w-56 pt-2 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 transform origin-top scale-95 group-hover:scale-100">
+                            <div class="bg-[#112240] border border-white/10 rounded-xl shadow-2xl py-2 overflow-hidden">
+                                <a href="products.html" class="block px-5 py-2.5 text-sm text-slate-300 hover:bg-blue-600/20 hover:text-white transition-colors">Switches</a>
+                                <a href="products.html" class="block px-5 py-2.5 text-sm text-slate-300 hover:bg-blue-600/20 hover:text-white transition-colors">Routers</a>
+                                <a href="products.html" class="block px-5 py-2.5 text-sm text-slate-300 hover:bg-blue-600/20 hover:text-white transition-colors">Access Points</a>
+                                <a href="products.html" class="block px-5 py-2.5 text-sm text-slate-300 hover:bg-blue-600/20 hover:text-white transition-colors">IP Phones</a>
+                                <a href="products.html" class="block px-5 py-2.5 text-sm text-slate-300 hover:bg-blue-600/20 hover:text-white transition-colors">Security Firewalls</a>
+                                <a href="products.html" class="block px-5 py-2.5 text-sm text-slate-300 hover:bg-blue-600/20 hover:text-white transition-colors">Servers & Storage</a>
+                                <a href="products.html" class="block px-5 py-2.5 text-sm text-slate-300 hover:bg-blue-600/20 hover:text-white transition-colors">Transceivers</a>
+                                <a href="products.html" class="block px-5 py-2.5 text-sm text-slate-300 hover:bg-blue-600/20 hover:text-white transition-colors">Power Solutions</a>
+                                <a href="products.html" class="block px-5 py-2.5 text-sm text-slate-300 hover:bg-blue-600/20 hover:text-white transition-colors">Cables & Accessories</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="DigitalTransformation.html" class="text-slate-200 hover:text-white text-sm font-semibold transition-colors">Digital Transformation</a>
+                    <a href="gallery.html" class="text-slate-200 hover:text-white text-sm font-semibold transition-colors">Gallery</a>
+                    <a href="tracking.html" class="text-slate-200 hover:text-white text-sm font-semibold transition-colors">Shipment Tracking</a>
+                    <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Contact Us</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white p-2">
+                        <svg id="icon-menu" class="w-7 h-7 block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                        <svg id="icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-[#0a192f]/95 backdrop-blur-xl border-b border-slate-800">
+            <div class="px-4 pt-4 pb-8 space-y-2">
+                <a href="about.html" class="block px-3 py-4 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg">About Us</a>
+                
+                <div>
+                    <div class="flex items-center justify-between px-3 py-4 hover:bg-slate-800 rounded-lg cursor-pointer" onclick="document.getElementById('mobile-products').classList.toggle('hidden'); document.getElementById('mobile-products-icon').classList.toggle('rotate-180');">
+                        <a href="products.html" class="text-base font-medium text-slate-300 hover:text-white transition-colors">Products</a>
+                        <button class="p-1">
+                            <svg id="mobile-products-icon" class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                    </div>
+                    <div id="mobile-products" class="hidden pl-6 pr-3 py-2 space-y-1 bg-slate-800/30 rounded-lg mt-1 border-l-2 border-blue-500/50 mx-2">
+                        <a href="products.html" class="block px-3 py-2.5 text-sm font-medium text-slate-400 hover:text-white transition-colors">Switches</a>
+                        <a href="products.html" class="block px-3 py-2.5 text-sm font-medium text-slate-400 hover:text-white transition-colors">Routers</a>
+                        <a href="products.html" class="block px-3 py-2.5 text-sm font-medium text-slate-400 hover:text-white transition-colors">Access Points</a>
+                        <a href="products.html" class="block px-3 py-2.5 text-sm font-medium text-slate-400 hover:text-white transition-colors">IP Phones</a>
+                        <a href="products.html" class="block px-3 py-2.5 text-sm font-medium text-slate-400 hover:text-white transition-colors">Security Firewalls</a>
+                        <a href="products.html" class="block px-3 py-2.5 text-sm font-medium text-slate-400 hover:text-white transition-colors">Servers & Storage</a>
+                        <a href="products.html" class="block px-3 py-2.5 text-sm font-medium text-slate-400 hover:text-white transition-colors">Transceivers</a>
+                        <a href="products.html" class="block px-3 py-2.5 text-sm font-medium text-slate-400 hover:text-white transition-colors">Power Solutions</a>
+                        <a href="products.html" class="block px-3 py-2.5 text-sm font-medium text-slate-400 hover:text-white transition-colors">Cables & Accessories</a>
+                    </div>
+                </div>
+
+                <a href="DigitalTransformation.html" class="block px-3 py-4 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg">Digital Transformation</a>
+                <a href="gallery.html" class="block px-3 py-4 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg">Gallery</a>
+                <a href="tracking.html" class="block px-3 py-4 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg">Shipment Tracking</a>
+                <div class="pt-4 px-3">
+                    <a href="contact.html" class="block w-full text-center bg-blue-600 text-white py-3 rounded-xl font-bold">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-16">
+        <div class="relative bg-primary pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden z-0">
+            <div class="absolute inset-0 z-[-1]">
+                <div class="absolute inset-0 bg-blue-900/20 mix-blend-multiply"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary to-slate-50"></div>
+                <div class="absolute -top-24 -right-24 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-0 -left-24 w-72 h-72 bg-secondary/10 rounded-full blur-3xl"></div>
+            </div>
+            
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 text-secondary font-medium border border-blue-500/20 text-sm mb-6">
+                    Welcome to RingTech
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
+                    About <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-secondary">Us</span>
+                </h1>
+                <p class="text-xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
+                    We specialize in delivering high-quality networking hardware and infrastructure solutions that power modern businesses.
+                </p>
+            </div>
+        </div>
+
+        <div class="bg-slate-50 py-16 md:py-24 relative z-10 -mt-10 rounded-t-[3rem] shadow-xl border-t border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="max-w-4xl mx-auto text-center mb-20">
+                    <h2 class="text-3xl font-bold text-primary mb-6">A Foundation of Excellence</h2>
+                    <p class="text-lg text-gray-600 font-light leading-relaxed">
+                        From enterprise-grade switches, routers, and connectivity systems, we ensure reliable, scalable,
+                        and high-performance technology tailored to your business needs. Building on this strong
+                        foundation, we help organizations embrace digital transformation through a wide range of
+                        innovative solutions.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 max-w-5xl mx-auto">
+                    <div class="bg-white rounded-3xl p-8 md:p-10 shadow-lg shadow-blue-900/5 hover:-translate-y-2 transition-transform duration-300 border border-gray-100">
+                        <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 border border-blue-100">
+                            <svg class="w-8 h-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-primary mb-4">Digital Transformation</h3>
+                        <p class="text-gray-600 font-light leading-relaxed">
+                            Our services include web development, CRM solutions, WhatsApp marketing, cybersecurity, and
+                            Automation & AI, enabling businesses to enhance efficiency, strengthen customer engagement,
+                            and stay ahead in a competitive landscape.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-3xl p-8 md:p-10 shadow-lg shadow-emerald-900/5 hover:-translate-y-2 transition-transform duration-300 border border-gray-100">
+                        <div class="w-16 h-16 bg-emerald-50 rounded-2xl flex items-center justify-center mb-8 border border-emerald-100">
+                            <svg class="w-8 h-8 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-primary mb-4">Customer Commitment</h3>
+                        <p class="text-gray-600 font-light leading-relaxed">
+                            At the core of everything we do is a strong commitment to customer satisfaction. We focus on
+                            understanding each client’s unique requirements and delivering solutions that are reliable,
+                            efficient, and future-ready. Our goal is to build long-term partnerships through quality
+                            service, transparency, and consistent support.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative bg-primary rounded-3xl overflow-hidden shadow-2xl max-w-5xl mx-auto">
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary to-blue-900"></div>
+                    <div class="absolute -top-32 -right-32 w-64 h-64 bg-secondary/20 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-32 -left-32 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl"></div>
+
+                    <div class="relative px-8 py-16 md:px-16 md:py-20 text-center">
+                        <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-8 backdrop-blur-sm border border-white/20">
+                            <svg class="w-10 h-10 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Your Success is Our Priority</h2>
+                        <p class="text-xl text-blue-100 font-light max-w-3xl mx-auto mb-10 leading-relaxed">
+                            At RingTech Global, we strive to be the technology partner you can trust at every stage of
+                            your growth.
+                        </p>
+                        <a href="contact.html" class="inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-primary bg-secondary hover:bg-white rounded-full transition-all duration-300 shadow-lg hover:shadow-secondary/30 transform hover:-translate-y-1 tracking-wide uppercase">
+                            Work With Us Today
+                            <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer id="contact" class="bg-[#050d1a] pt-16 pb-8 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div class="space-y-4">
+                    <a href="index.html" class="text-2xl font-bold text-white tracking-tight">Ring<span class="text-blue-400">TechGlobal</span></a>
+                    <p class="text-slate-400 text-sm leading-relaxed pr-4">Empowering businesses through innovative digital transformation, robust web solutions, and scalable IT infrastructure.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-5">Solutions</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">About Us</a></li>
+                        <li><a href="products.html" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">Products</a></li>
+                        <li><a href="DigitalTransformation.html" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">Digital Transformation</a></li>
+                        <li><a href="gallery.html" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">Gallery</a></li>
+                        <li><a href="tracking.html" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">Shipment Tracking</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-5">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="privacy.html" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-5">Contact Us</h4>
+                    <ul class="space-y-3 text-slate-400 text-sm">
+                        <li><span class="text-slate-300">Email:</span> contact@ringtechglobal.com</li>
+                        <li><span class="text-slate-300">Phone:</span> +1 (555) 123-4567</li>
+                        <li><span class="text-slate-300 leading-relaxed block">HQ: 123 Innovation Drive,<br>Tech City, TC 90210</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-800 text-center">
+                <p class="text-slate-500 text-sm">&copy; 2026 Ring Tech Global. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
