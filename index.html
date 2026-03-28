@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth overflow-x-hidden">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body class="selection:bg-blue-500/30 bg-[#0a192f]">
+<body class="selection:bg-blue-500/30 bg-[#0a192f] overflow-x-hidden flex flex-col min-h-screen w-full relative">
 
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,13 +82,13 @@
         </div>
     </nav>
 
-    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+    <header class="relative h-screen flex items-center justify-center overflow-hidden w-full">
         <div class="absolute inset-0 bg-[#0a192f]/70 z-10"></div>
         <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
             <source src="./assets/videos/background video.mp4" type="video/mp4">
         </video>
-        <div class="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto mt-16">
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-8">
+        <div class="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto mt-16 w-full">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-8 break-words leading-tight">
                 Powering Global Connectivity & <br class="hidden md:block" />
                 <span class="text-blue-500">Digital Transformation</span>
             </h1>
@@ -96,22 +96,22 @@
                 Delivering enterprise-grade networking hardware and intelligent digital solutions to businesses worldwide. From infrastructure to innovation, we enable seamless connectivity, scalability, and performance.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="DigitalTransformation.html" class="px-8 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition-all shadow-lg hover:shadow-blue-500/30">
+                <a href="DigitalTransformation.html" class="px-8 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition-all shadow-lg hover:shadow-blue-500/30 text-center">
                     Explore Solutions
                 </a>
-                <a href="contact.html" class="px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-full border border-white/20 transition-all backdrop-blur-sm">
+                <a href="contact.html" class="px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-full border border-white/20 transition-all backdrop-blur-sm text-center">
                     Contact Us
                 </a>
             </div>
         </div>
     </header>
 
-    <main>
-        <section class="py-24 bg-[#0a192f] border-t border-white/5">
+    <main class="w-full flex-grow">
+        <section class="py-24 bg-[#0a192f] border-t border-white/5 w-full overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
                     
-                    <div class="bg-[#0f172a] rounded-[2rem] p-10 border border-blue-900/40 shadow-2xl transition-transform duration-300 hover:-translate-y-1 hover:border-blue-700/50">
+                    <div class="bg-[#0f172a] rounded-[2rem] p-8 md:p-10 border border-blue-900/40 shadow-2xl transition-transform duration-300 hover:-translate-y-1 hover:border-blue-700/50">
                         <div class="w-12 h-12 bg-[#1e293b] rounded-xl flex items-center justify-center mb-8 shadow-inner">
                             <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm0 10a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm4-6h.01M8 17h.01"></path>
@@ -128,7 +128,7 @@
                         </p>
                     </div>
 
-                    <div class="bg-[#0f172a] rounded-[2rem] p-10 border border-blue-900/40 shadow-2xl transition-transform duration-300 hover:-translate-y-1 hover:border-blue-700/50">
+                    <div class="bg-[#0f172a] rounded-[2rem] p-8 md:p-10 border border-blue-900/40 shadow-2xl transition-transform duration-300 hover:-translate-y-1 hover:border-blue-700/50">
                         <div class="w-12 h-12 bg-[#1e293b] rounded-xl flex items-center justify-center mb-8 shadow-inner">
                             <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 21h6v-1a3 3 0 00-6 0v1zm3-19a6 6 0 00-4.243 10.243A2.996 2.996 0 019 14v2h6v-2a2.996 2.996 0 011.243-1.757A6 6 0 0012 2z"></path>
@@ -149,18 +149,18 @@
             </div>
         </section>
 
-        <section class="py-16 bg-slate-50 border-t border-slate-200">
+        <section class="py-16 bg-slate-50 border-t border-slate-200 w-full overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-10">
                     <h3 class="text-xs font-bold text-blue-600 uppercase tracking-[0.4em] mb-4">Industry-Leading Technologies</h3>
                     <p class="text-slate-900 text-3xl font-extrabold tracking-tight md:text-4xl">Our Strategic Technology Partners</p>
                 </div>
-                <div id="logo-filters" class="flex flex-wrap justify-center gap-2 mb-10 border border-slate-200 bg-white p-1.5 rounded-full w-max mx-auto shadow-sm"></div>
-                <div id="logo-grid" class="flex flex-wrap justify-center gap-4 lg:gap-5 items-center max-w-[1400px] mx-auto"></div>
+                <div id="logo-filters" class="flex flex-wrap justify-center gap-2 mb-10 border border-slate-200 bg-white p-1.5 rounded-full max-w-full mx-auto shadow-sm overflow-x-auto"></div>
+                <div id="logo-grid" class="flex flex-wrap justify-center gap-4 lg:gap-5 items-center max-w-[1400px] mx-auto w-full"></div>
             </div>
         </section>
 
-        <section class="py-16 bg-white border-b border-slate-200">
+        <section class="py-16 bg-white border-b border-slate-200 w-full overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 text-center">
                     <div class="flex flex-col items-center justify-center space-y-2 transform transition-transform hover:scale-105 duration-300">
@@ -183,7 +183,7 @@
             </div>
         </section>
 
-        <section class="py-24 bg-[#0a192f] border-t border-white/5">
+        <section class="py-24 bg-[#0a192f] border-t border-white/5 w-full overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="text-center mb-16">
@@ -248,8 +248,8 @@
             </div>
         </section>
 
-        <section class="py-24 bg-[#0a192f] border-t border-white/5 overflow-hidden">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section class="py-24 bg-[#0a192f] border-t border-white/5 w-full overflow-hidden relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
                     <div class="w-full lg:w-1/2 space-y-8">
                         <div>
@@ -273,17 +273,17 @@
                     </div>
                     <div class="w-full lg:w-1/2 relative mt-10 lg:mt-0">
                         <div class="relative rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 group">
-                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop" alt="Global Networking Infrastructure" class="w-full h-[500px] object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700 hover:scale-105">
+                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop" alt="Global Networking Infrastructure" class="w-full h-[300px] md:h-[500px] object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700 hover:scale-105">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-transparent"></div>
                         </div>
-                        <div class="absolute -bottom-6 -left-6 md:-left-10 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-2xl">
-                            <div class="flex items-center space-x-5">
-                                <div class="p-3 bg-blue-600 rounded-full shadow-lg shadow-blue-500/30">
-                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                        <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 md:translate-x-0 md:-left-10 bg-white/10 backdrop-blur-md p-4 md:p-6 rounded-2xl border border-white/20 shadow-2xl w-max">
+                            <div class="flex items-center space-x-4 md:space-x-5">
+                                <div class="p-2 md:p-3 bg-blue-600 rounded-full shadow-lg shadow-blue-500/30">
+                                    <svg class="w-6 h-6 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                                 </div>
                                 <div>
-                                    <p class="text-white font-extrabold text-2xl tracking-tight">100%</p>
-                                    <p class="text-blue-300 font-medium text-sm tracking-wide">Client Satisfaction</p>
+                                    <p class="text-white font-extrabold text-xl md:text-2xl tracking-tight">100%</p>
+                                    <p class="text-blue-300 font-medium text-xs md:text-sm tracking-wide">Client Satisfaction</p>
                                 </div>
                             </div>
                         </div>
@@ -293,7 +293,7 @@
         </section>
     </main>
 
-    <footer id="contact" class="bg-[#050d1a] pt-16 pb-8 border-t border-slate-800">
+    <footer id="contact" class="bg-[#050d1a] pt-16 pb-8 border-t border-slate-800 w-full overflow-hidden mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 <div class="space-y-4">
