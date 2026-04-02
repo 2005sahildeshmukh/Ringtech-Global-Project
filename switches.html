@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switches | Ring Tech Global</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+    <style>
+        #navbar { background-color: #0a192f !important; padding-top: 0.75rem !important; padding-bottom: 0.75rem !important; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        /* Smooth fade for filtering */
+        .product-card { transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; }
+    </style>
+</head>
+<body class="selection:bg-blue-500/30 bg-[#0a192f] overflow-x-hidden flex flex-col min-h-screen w-full">
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-white tracking-tight">Ring<span class="text-blue-400">TechGlobal</span></a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                    <a href="about.html" class="text-slate-200 hover:text-white text-sm font-semibold transition-colors">About Us</a>
+                    
+                    <div class="relative group">
+                        <a href="products.html" class="text-white text-sm font-semibold transition-colors inline-flex items-center py-2">
+                            Products
+                            <svg class="w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </a>
+                        <div class="absolute left-0 top-full w-56 pt-2 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 transform origin-top scale-95 group-hover:scale-100">
+                            <div class="bg-[#112240] border border-white/10 rounded-xl shadow-2xl py-2 overflow-hidden">
+                                <a href="switches.html" class="block px-5 py-2.5 text-sm text-white bg-blue-600/20 transition-colors">Switches</a>
+                                <a href="routers.html" class="block px-5 py-2.5 text-sm text-slate-300 hover:bg-blue-600/20 hover:text-white transition-colors">Routers</a>
+                                <a href="access-points.html" class="block px-5 py-2.5 text-sm text-slate-300 hover:bg-blue-600/20 hover:text-white transition-colors">Access Points</a>
+                                <a href="ip-phones.html" class="block px-5 py-2.5 text-sm text-slate-300 hover:bg-blue-600/20 hover:text-white transition-colors">IP Phones</a>
+                                <a href="firewalls.html" class="block px-5 py-2.5 text-sm text-slate-300 hover:bg-blue-600/20 hover:text-white transition-colors">Security Firewalls</a>
+                                <a href="servers-storage.html" class="block px-5 py-2.5 text-sm text-slate-300 hover:bg-blue-600/20 hover:text-white transition-colors">Servers & Storage</a>
+                                <a href="transceivers.html" class="block px-5 py-2.5 text-sm text-slate-300 hover:bg-blue-600/20 hover:text-white transition-colors">Transceivers</a>
+                                <a href="power-solutions.html" class="block px-5 py-2.5 text-sm text-slate-300 hover:bg-blue-600/20 hover:text-white transition-colors">Power Solutions</a>
+                                <a href="cables-accessories.html" class="block px-5 py-2.5 text-sm text-slate-300 hover:bg-blue-600/20 hover:text-white transition-colors">Cables & Accessories</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="DigitalTransformation.html" class="text-slate-200 hover:text-white text-sm font-semibold transition-colors">Digital Transformation</a>
+                    <a href="gallery.html" class="text-slate-200 hover:text-white text-sm font-semibold transition-colors">Gallery</a>
+                    <a href="tracking.html" class="text-slate-200 hover:text-white text-sm font-semibold transition-colors">Shipment Tracking</a>
+                    
+                    <div class="flex items-center space-x-4">
+                        <a href="contact.html" class="relative text-slate-300 hover:text-white transition-colors p-2" title="View Quote List">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+                            <span class="cart-badge absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center" style="display: none;">0</span>
+                        </a>
+                        <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Contact Us</a>
+                    </div>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white p-2">
+                        <svg class="w-7 h-7 block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-32 pb-24 relative overflow-hidden">
+        
+        <div class="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl z-0 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center mb-12 max-w-4xl mx-auto">
+                <h2 class="text-blue-400 font-bold tracking-[0.2em] uppercase text-sm mb-4">Enterprise Hardware</h2>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-6">Network Switches</h1>
+                <p class="text-slate-400 text-base md:text-lg font-light leading-relaxed mb-4">
+                    Network switches form the foundation of modern IT infrastructure by enabling efficient communication between devices within a network. They intelligently forward data packets between endpoints such as computers, servers, IP phones, and access points.
+                </p>
+                <p class="text-slate-400 text-base font-light">
+                    Modern switches support advanced features like Layer 2/Layer 3 routing, VLAN segmentation, QoS (Quality of Service), PoE (Power over Ethernet), and high-speed uplinks (10G/25G/40G/100G).
+                </p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-8 items-start">
+                
+                <aside class="w-full lg:w-1/4 bg-[#112240] border border-white/10 rounded-2xl p-6 sticky top-32 shadow-xl z-20">
+                    <h3 class="text-xl font-bold text-white mb-6 border-b border-white/10 pb-4">Brands</h3>
+                    <ul class="space-y-2 flex flex-row lg:flex-col overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 scrollbar-hide">
+                        <li>
+                            <button class="filter-btn w-full text-left px-4 py-2.5 rounded-lg text-sm font-semibold transition-all text-blue-400 bg-blue-600/10 border-l-2 border-blue-400 whitespace-nowrap" data-filter="all">All Brands</button>
+                        </li>
+                        <li>
+                            <button class="filter-btn w-full text-left px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-400 hover:text-white hover:bg-white/5 transition-all border-l-2 border-transparent whitespace-nowrap" data-filter="Cisco">Cisco</button>
+                        </li>
+                        <li>
+                            <button class="filter-btn w-full text-left px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-400 hover:text-white hover:bg-white/5 transition-all border-l-2 border-transparent whitespace-nowrap" data-filter="Meraki">Meraki</button>
+                        </li>
+                        <li>
+                            <button class="filter-btn w-full text-left px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-400 hover:text-white hover:bg-white/5 transition-all border-l-2 border-transparent whitespace-nowrap" data-filter="HPE Aruba">HPE Aruba</button>
+                        </li>
+                        <li>
+                            <button class="filter-btn w-full text-left px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-400 hover:text-white hover:bg-white/5 transition-all border-l-2 border-transparent whitespace-nowrap" data-filter="Juniper">Juniper</button>
+                        </li>
+                        <li>
+                            <button class="filter-btn w-full text-left px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-400 hover:text-white hover:bg-white/5 transition-all border-l-2 border-transparent whitespace-nowrap" data-filter="Huawei">Huawei</button>
+                        </li>
+                        <li>
+                            <button class="filter-btn w-full text-left px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-400 hover:text-white hover:bg-white/5 transition-all border-l-2 border-transparent whitespace-nowrap" data-filter="Ubiquiti">Ubiquiti</button>
+                        </li>
+                    </ul>
+                </aside>
+
+                <div class="w-full lg:w-3/4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="product-grid">
+                        
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Cisco">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/C1300-8P-E-2G.webp" alt="Cisco C1300-8P-E-2G" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-blue-400 uppercase tracking-wider mb-1">Cisco</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">C1300-8P-E-2G</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">Catalyst 1300 8-port PoE+ compact managed switch for SMBs.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Cisco">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/C1300-24P-4G.webp" alt="Cisco C1300-24P-4G" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-blue-400 uppercase tracking-wider mb-1">Cisco</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">C1300-24P-4G</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">Catalyst 1300 24-port PoE+ switch with 4x1G SFP uplinks.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Cisco">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/C1300-48P-4G.webp" alt="Cisco C1300-48P-4G" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-blue-400 uppercase tracking-wider mb-1">Cisco</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">C1300-48P-4G</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">Catalyst 1300 48-port PoE+ switch with 4x1G SFP uplinks.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Cisco">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/C9200L-24P-4G-E.webp" alt="Cisco C9200L-24P-4G-E" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-blue-400 uppercase tracking-wider mb-1">Cisco</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">C9200L-24P-4G-E</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">Catalyst 9200L 24-port PoE+ with 4x1G uplinks, Network Essentials.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Cisco">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/C9200L-24P-4X-E.webp" alt="Cisco C9200L-24P-4X-E" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-blue-400 uppercase tracking-wider mb-1">Cisco</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">C9200L-24P-4X-E</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">Catalyst 9200L 24-port PoE+ with 4x10G SFP+ uplinks.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Cisco">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/C9200L-48P-4G-E.webp" alt="Cisco C9200L-48P-4G-E" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-blue-400 uppercase tracking-wider mb-1">Cisco</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">C9200L-48P-4G-E</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">Catalyst 9200L 48-port PoE+ with 4x1G uplinks, Network Essentials.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Cisco">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/C9200L-48P-4X-E.webp" alt="Cisco C9200L-48P-4X-E" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-blue-400 uppercase tracking-wider mb-1">Cisco</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">C9200L-48P-4X-E</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">Catalyst 9200L 48-port PoE+ with 4x10G SFP+ uplinks.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Cisco">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/C9300L-24P-4G-E.webp" alt="Cisco C9300L-24P-4G-E" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-blue-400 uppercase tracking-wider mb-1">Cisco</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">C9300L-24P-4G-E</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">Catalyst 9300L 24-port PoE+ with 4x1G uplinks, Enterprise-class.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Cisco">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/C9300L-24P-4X-E.webp" alt="Cisco C9300L-24P-4X-E" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-blue-400 uppercase tracking-wider mb-1">Cisco</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">C9300L-24P-4X-E</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">Catalyst 9300L 24-port PoE+ with 4x10G uplinks, high-performance edge.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Cisco">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/C9300L-48P-4G-E.webp" alt="Cisco C9300L-48P-4G-E" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-blue-400 uppercase tracking-wider mb-1">Cisco</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">C9300L-48P-4G-E</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">Catalyst 9300L 48-port PoE+ with 4x1G uplinks, Enterprise-class.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Cisco">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/C9300L-48P-4X-E.webp" alt="Cisco C9300L-48P-4X-E" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-blue-400 uppercase tracking-wider mb-1">Cisco</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">C9300L-48P-4X-E</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">Catalyst 9300L 48-port PoE+ with 4x10G uplinks, scalable access.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Cisco">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/C9500-24Y4C-E.webp" alt="Cisco C9500-24Y4C-E" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-blue-400 uppercase tracking-wider mb-1">Cisco</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">C9500-24Y4C-E</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">Catalyst 9500 24-port 10G/25G with 4x40G/100G uplinks, core switch.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Meraki">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/MS120-8FP.webp" alt="Meraki MS120-8FP" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-1">Meraki</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">MS120-8FP</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">Cloud-managed 8-port Gigabit PoE+ switch for small branches.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Meraki">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/MS120-24.webp" alt="Meraki MS120-24" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-1">Meraki</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">MS120-24</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">Cloud-managed 24-port Gigabit switch with 4x1G SFP uplinks.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Meraki">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/MS130-24.webp" alt="Meraki MS130-24" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-1">Meraki</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">MS130-24</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">Cloud-managed 24-port switch for optimized layer 2 access.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Meraki">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/MS210-24P.webp" alt="Meraki MS210-24P" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-1">Meraki</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">MS210-24P</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">Cloud-managed 24-port PoE+ switch with basic layer 3 routing.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Meraki">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/MS225-48FP.webp" alt="Meraki MS225-48FP" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-1">Meraki</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">MS225-48FP</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">Cloud-managed 48-port Full PoE+ switch with 10G SFP+ uplinks.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="HPE Aruba">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/JL658A.webp" alt="HPE Aruba JL658A" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-orange-400 uppercase tracking-wider mb-1">HPE Aruba</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">JL658A</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">Aruba CX 6300M 48-port SR5 PoE Class 8 with 4xSFP56 switch.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="HPE Aruba">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/JL675A.webp" alt="HPE Aruba JL675A" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-orange-400 uppercase tracking-wider mb-1">HPE Aruba</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">JL675A</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">Aruba CX 6100 48G Class 4 PoE 4SFP+ switch.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="HPE Aruba">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/JL685A.webp" alt="HPE Aruba JL685A" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-orange-400 uppercase tracking-wider mb-1">HPE Aruba</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">JL685A</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">Aruba Instant On 1930 48G Class 4 PoE 4SFP/SFP+ switch.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="HPE Aruba">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/JL724A.webp" alt="HPE Aruba JL724A" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-orange-400 uppercase tracking-wider mb-1">HPE Aruba</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">JL724A</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">Aruba CX 6200F 24G Class 4 PoE 4SFP+ switch.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="HPE Aruba">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/JL727A.webp" alt="HPE Aruba JL727A" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-orange-400 uppercase tracking-wider mb-1">HPE Aruba</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">JL727A</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">Aruba CX 6200F 48G Class 4 PoE 4SFP+ switch.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Juniper">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/EX4100-24T.webp" alt="Juniper EX4100-24T" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-purple-400 uppercase tracking-wider mb-1">Juniper</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">EX4100-24T</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">EX4100 24-port 10/100/1000BASE-T switch, MACsec AES256.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Juniper">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/EX4100-48P.webp" alt="Juniper EX4100-48P" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-purple-400 uppercase tracking-wider mb-1">Juniper</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">EX4100-48P</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">EX4100 48-port PoE+ switch for AI-driven enterprise access.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Juniper">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/EX4100-48T.webp" alt="Juniper EX4100-48T" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-purple-400 uppercase tracking-wider mb-1">Juniper</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">EX4100-48T</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">EX4100 48-port non-PoE Gigabit Ethernet switch.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Juniper">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/EX4100-F-12.webp" alt="Juniper EX4100-F-12" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-purple-400 uppercase tracking-wider mb-1">Juniper</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">EX4100-F-12</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">EX4100-F 12-port compact fanless switch for branch deployments.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Juniper">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/EX4400-48P.webp" alt="Juniper EX4400-48P" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-purple-400 uppercase tracking-wider mb-1">Juniper</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">EX4400-48P</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">EX4400 48-port PoE+ switch, advanced security & EVPN-VXLAN.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Huawei">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/S5735-L8T4X-QA-V2.webp" alt="Huawei S5735-L8T4X-QA-V2" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-red-500 uppercase tracking-wider mb-1">Huawei</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">S5735-L8T4X-QA-V2</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">CloudEngine 8-port Gigabit switch with 4x10GE SFP+ uplinks.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Huawei">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/S5735-L24T4S-A1.webp" alt="Huawei S5735-L24T4S-A1" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-red-500 uppercase tracking-wider mb-1">Huawei</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">S5735-L24T4S-A1</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">CloudEngine 24-port Gigabit switch with 4xGE SFP uplinks.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Huawei">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/S5735-L48T4S-A-V2.webp" alt="Huawei S5735-L48T4S-A-V2" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-red-500 uppercase tracking-wider mb-1">Huawei</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">S5735-L48T4S-A-V2</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">CloudEngine 48-port Gigabit switch with 4xGE SFP uplinks.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Huawei">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/S6730-H24X6C.webp" alt="Huawei S6730-H24X6C" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-red-500 uppercase tracking-wider mb-1">Huawei</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">S6730-H24X6C</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">CloudEngine 24-port 10GE SFP+ switch with 6x100GE QSFP28 uplinks.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Huawei">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/S6730-H48X6C.webp" alt="Huawei S6730-H48X6C" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-red-500 uppercase tracking-wider mb-1">Huawei</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">S6730-H48X6C</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">CloudEngine 48-port 10GE SFP+ switch with 6x100GE QSFP28 uplinks.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Ubiquiti">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/USW-24-POE.webp" alt="Ubiquiti USW-24-POE" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-cyan-400 uppercase tracking-wider mb-1">Ubiquiti</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">USW-24-POE</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">UniFi 24-port PoE switch with 16 PoE+ and 2 SFP ports.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Ubiquiti">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/USW-Pro-24-POE.webp" alt="Ubiquiti USW-Pro-24-POE" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-cyan-400 uppercase tracking-wider mb-1">Ubiquiti</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">USW-Pro-24-POE</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">UniFi Pro 24-port PoE switch with 8 PoE++ and 2 SFP+ ports.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Ubiquiti">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/USW-Pro-Max-24.webp" alt="Ubiquiti USW-Pro-Max-24" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-cyan-400 uppercase tracking-wider mb-1">Ubiquiti</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">USW-Pro-Max-24</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">UniFi Pro Max 24-port switch with Etherlighting and 2.5GbE.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Ubiquiti">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/USW-Pro-Max-24-PoE.webp" alt="Ubiquiti USW-Pro-Max-24-PoE" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-cyan-400 uppercase tracking-wider mb-1">Ubiquiti</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">USW-Pro-Max-24-PoE</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">UniFi Pro Max 24-port PoE switch with Etherlighting & PoE++.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card bg-[#112240] rounded-2xl overflow-hidden border border-white/10 flex flex-col hover:-translate-y-1 hover:border-blue-500/50 transition-all duration-300 shadow-xl group" data-brand="Ubiquiti">
+                            <div class="h-48 bg-white flex items-center justify-center p-6 relative overflow-hidden">
+                                <img src="./assets/images/Switches/USW-Pro-XG-24.webp" alt="Ubiquiti USW-Pro-XG-24" class="max-h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs font-bold text-cyan-400 uppercase tracking-wider mb-1">Ubiquiti</span>
+                                <h3 class="text-lg font-bold text-white mb-2 leading-snug">USW-Pro-XG-24</h3>
+                                <p class="text-slate-400 text-sm font-light mb-6 flex-grow">UniFi Pro XG 24-port 10GbE switch with 2x25G SFP28 uplinks.</p>
+                                <button onclick="viewProduct(this)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-center text-sm shadow-md">View Details</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="contact" class="bg-[#050d1a] pt-16 pb-8 border-t border-slate-800 w-full overflow-hidden mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div class="space-y-4">
+                    <a href="index.html" class="text-2xl font-bold text-white tracking-tight">Ring<span class="text-blue-400">TechGlobal</span></a>
+                    <p class="text-slate-400 text-sm leading-relaxed pr-4">Empowering businesses through innovative digital transformation, robust web solutions, and scalable IT infrastructure.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-5">Solutions</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">About Us</a></li>
+                        <li><a href="products.html" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">Products</a></li>
+                        <li><a href="DigitalTransformation.html" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">Digital Transformation</a></li>
+                        <li><a href="gallery.html" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">Gallery</a></li>
+                        <li><a href="tracking.html" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">Shipment Tracking</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-5">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="privacy.html" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-5">Contact Us</h4>
+                    <ul class="space-y-3 text-slate-400 text-sm">
+                        <li>
+                            <span class="text-slate-300 block mb-1">Email:</span> 
+                            <a href="mailto:info@ringtechglobal.com" class="hover:text-blue-400 transition-colors">info@ringtechglobal.com</a>
+                        </li>
+                        <li>
+                            <span class="text-slate-300 block mb-1">India (Enquiry & Sales):</span> 
+                            <a href="tel:+918451850006" class="hover:text-blue-400 transition-colors">+91 8451 85 0006</a><br>
+                            <a href="tel:+918097437011" class="hover:text-blue-400 transition-colors">+91 8097 43 7011</a> / <a href="tel:+918097447011" class="hover:text-blue-400 transition-colors">+91 8097 44 7011</a>
+                        </li>
+                        <li class="pt-2 border-t border-white/10">
+                            <span class="text-slate-300 leading-relaxed block mt-2">
+                                <strong>HQ:</strong> Office 17, Plot No. 112,<br>Mahavir Dham, Sector-12,<br>Vashi, Navi Mumbai - 400703
+                            </span>
+                        </li>
+                        <li class="pt-2 border-t border-white/10">
+                            <span class="text-slate-300 block mb-1"><strong>Global Presence:</strong></span>
+                            UAE Offices<br>
+                            Warehouses: China, Hong Kong
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-800 text-center">
+                <p class="text-slate-500 text-sm">&copy; 2026 Ring Tech Global. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const products = document.querySelectorAll('.product-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => {
+                        b.classList.remove('text-blue-400', 'bg-blue-600/10', 'border-blue-400');
+                        b.classList.add('text-slate-400', 'border-transparent');
+                    });
+
+                    btn.classList.remove('text-slate-400', 'border-transparent');
+                    btn.classList.add('text-blue-400', 'bg-blue-600/10', 'border-blue-400');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    products.forEach(product => {
+                        if (filterValue === 'all' || product.getAttribute('data-brand') === filterValue) {
+                            product.style.display = 'flex'; 
+                            setTimeout(() => {
+                                product.style.opacity = '1';
+                                product.style.transform = 'scale(1)';
+                            }, 10);
+                        } else {
+                            product.style.opacity = '0';
+                            product.style.transform = 'scale(0.95)';
+                            setTimeout(() => {
+                                product.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    
+    <script src="./assets/js/quote.js"></script>
+</body>
+</html>
